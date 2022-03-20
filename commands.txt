@@ -1,0 +1,38 @@
+1- global: npm install -g typescript 
+2- to run project we can write: 
+	- tsc sanbox.ts sanbox.js  
+	or if both files are same name we ca write:
+	- tsc sanbox.ts
+
+	to make it run always we can watch:
+	- tsc sanbox.ts -w
+
+2-  to create tsconfig.json file:
+     - tsc --init
+
+
+
+3- changing Directory to src folder:
+- open tsconfig.json file 
+- uncomment rootDir and set to ./src
+- uncomment outDir and set it to ./public
+
+
+now we can enter only : tsc -w
+because its automatically go to src as we did in (tsconfig.json) file on (rootDir) line
+
+
+
+4- What if i add a file outside src and outside public => it automatically compile it into public folder so th solution is::::::::::::
+
+- open tsconfig.json file -> at end of file add: "include": ["src"]
+
+
+
+lesson 14: Modules
+go to tsconfig: change module: commonjs to module: 2015
+then go to index.html and add type beside script tag last line: 
+<script> type="module" src="app.js"</script>
+
+
+
